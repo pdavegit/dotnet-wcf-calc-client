@@ -1,4 +1,4 @@
 dotnet publish -c Release
-docker build -t GettingStartedClient -f Dockerfile .
+docker build -t dotnet-wcf-calc-client -f Dockerfile .
 
 
