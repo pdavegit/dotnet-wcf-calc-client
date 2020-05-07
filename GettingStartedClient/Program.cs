@@ -7,8 +7,9 @@ namespace GettingStartedClient
         static void Main(string[] args)
         {
             //Step 1: Create an instance of the WCF proxy.
+            // Assume that the service is running on a windows host that has docker desktop installed.
             CalculatorClient client = new CalculatorClient(new BasicHttpBinding(),
-	    		     new EndpointAddress("http://127.0.0.1:8000/GettingStarted/CalculatorService"));
+	    		     new EndpointAddress("http://host.docker.internal:8000/GettingStarted/CalculatorService"));
             // Step 2: Call the service operations.
             // Call the Add service operation.
             double value1 = 100.00D;
